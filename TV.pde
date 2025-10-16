@@ -1,10 +1,10 @@
-class Tv {
+class TvKast {
   float x;
   float y;
   boolean isOn;
 
 
-  Tv(float initX, float initY) {
+  TvKast(float initX, float initY) {
     x = initX;
     y = initY;
   }

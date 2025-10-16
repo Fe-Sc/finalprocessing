@@ -1,9 +1,9 @@
-Tv tv1;
+TvKast tvKast1;
 Window window1;
 
 void setup(){
   size(1200,700);
-  tv1 = new Tv(width/2,height/2);
+  tvKast1 = new TvKast(width/2,height/2);
   window1 = new Window();
 }
 
@@ -14,6 +14,6 @@ void mouseClicked(){
 
 void draw(){
   background(#FFFFFF);
-  tv1.display();
-  window1.displayWindow(300,300,500,300);
+  tvKast1.display();
+
 }
