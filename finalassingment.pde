@@ -7,6 +7,7 @@ void setup(){
   tvKast1 = new TvKast(width/2,height/2);
   window1 = new Window();
   tv1 = new Tv(105,380);
+  frameRate(10);
 }
 
 void mouseClicked(){
