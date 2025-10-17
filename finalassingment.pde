@@ -19,5 +19,6 @@ void draw(){
   background(#FFFFFF);
   tvKast1.display();
   tv1.display();
+  window1.displayWindow(100, 100, 300, 500);
   
 }
