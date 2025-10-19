@@ -14,7 +14,7 @@ class Window {
     xPos = mx;
     yPos = my;
     breakWindow(xPos, yPos);
-    println(xPos + ", " + yPos);
+ //   println(xPos + ", " + yPos);
   }
   //Draw the window (just a greyish transparant rectangle)
   void window(int x, int y, int breed, int hoog) {

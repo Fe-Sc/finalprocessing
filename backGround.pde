@@ -20,8 +20,7 @@ class achtergrond{
     rect(670, 120, 25, 580);
     rect(670, 120, 300, 45);
     rect(970, 120, 25, 580);
-    textFont(logo);
-    text("word", 100, 100);
+
   }
   
   void display(){

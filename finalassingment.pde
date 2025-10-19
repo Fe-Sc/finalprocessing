@@ -2,9 +2,10 @@ TvKast tvKast1;
 Window window1;
 Tv tv1;
 achtergrond bg;
+logoText text;
 
 int globalTimer = 0;
-PFont logo = createFont("Outfit-Bold.tff", 128);
+PFont logo;
 
 void setup(){
   size(1200,700);
@@ -12,10 +13,13 @@ void setup(){
   window1 = new Window();
   tv1 = new Tv(105,380);
   bg = new achtergrond();
+  text = new logoText(50, 95);
+  logo = createFont("Outfit-ExtraBold.tff", 96);
 }
 
 void mouseClicked(){
   window1.Update(mouseX, mouseY);
+  text.getMouse(mouseX, mouseY);
 }
 
 void updateTimer(){
@@ -27,11 +31,11 @@ void updateTimer(){
 
 void draw(){
   background(#FFFFFF);
-//  updateTimer();
+  updateTimer();
 //  tvKast1.display();
 //  tv1.display();
 //  window1.displayWindow(100, 100, 300, 500);
   bg.display();
-  println(globalTimer);
+  text.display();
   
 }
