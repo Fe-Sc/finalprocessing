@@ -5,11 +5,18 @@ class logoText{
   float gravity = 0.5;
   String[] letters = new String[]{"G", "A", "M", "E", "S", "H", "O", "P", "T", "W", "E", "N", "T", "E"};
   float[] letterX = new float[14];
-  float[] letterY = new float[]{95, 95, 95, 95, 95, 95, 95, 95, 95, 95, 95, 95, 95, 95};
+  float[] letterY = new float[14];
+  float[] speedY = new float[14];
   float[] durability = new float[]{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+  boolean[] falling = new boolean[14]; // track which letters are dropping
   logoText(float x, float y){
     xPos = x;
     yPos = y;
+      for (int i = 0; i < letterY.length; i++) {
+      letterY[i] = 95;
+      speedY[i] = 0;
+      falling[i] = false;
+      }
   }
   
   void makeText(){
@@ -30,7 +37,7 @@ class logoText{
   void getMouse(float x, float y){
     mx = x;
     my = y;
-    updateText();
+
   }
   
   void updateText(){
@@ -40,10 +47,22 @@ class logoText{
         println(letters[i]);
         durability[i] = durability[i] - 1;
         println(durability[i]);
+       if (durability[i] <= 0) falling[i] = true;
       }
+      
       }
       if (durability[i] == 0){
-        dropletter(i);
+              // update falling letters
+      if (falling[i]) {
+        speedY[i] += gravity;
+        letterY[i] += speedY[i];
+        
+        if (letterY[i] > 700) { // stop when it hits bottom
+          letterY[i] = 700;
+          speedY[i] = 0;
+          falling[i] = false;
+        }
+      }
       }
       //println(letterX);
       //println(letterY);
@@ -53,10 +72,9 @@ class logoText{
     void dropletter(int x){
       float speed = 1;
       while (letterY[x] < 700){
-       // if (globalTimer == 1){
+
         letterY[x] = letterY[x] + speed;
         speed = speed + gravity;
-     //   }
       }
       
       
@@ -64,6 +82,7 @@ class logoText{
   
   
   void display(){
+    updateText();
     makeText();
   }
 }
