@@ -19,7 +19,7 @@ class Window {
   //Draw the window (just a greyish transparant rectangle)
   void window(int x, int y, int breed, int hoog) {
     noStroke();
-    fill(#969ca1, 150);
+    fill(#969ca1, 75);
     rect(x, y, breed, hoog);
   }
 //Draw the cracks based on position (x, y)

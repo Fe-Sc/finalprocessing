@@ -34,8 +34,9 @@ void draw(){
   updateTimer();
 //  tvKast1.display();
 //  tv1.display();
-//  window1.displayWindow(100, 100, 300, 500);
+
   bg.display();
+  window1.displayWindow(70, 120, 600, 580);
   text.display();
   
 }
