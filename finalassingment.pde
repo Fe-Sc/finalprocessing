@@ -17,9 +17,9 @@ void setup(){
   logo = createFont("Outfit-ExtraBold.tff", 96);
 }
 
-void mouseClicked(){
+void mousePressed(){
   window1.Update(mouseX, mouseY);
-  text.getMouse(mouseX, mouseY);
+  text.onClick(mouseX, mouseY);
 }
 
 void updateTimer(){
