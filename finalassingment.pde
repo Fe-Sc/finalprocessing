@@ -3,6 +3,7 @@ Window window1;
 Tv tv1;
 achtergrond bg;
 logoText text;
+ArcadeMachine machine;
 
 int globalTimer = 0;
 PFont logo;
@@ -14,6 +15,7 @@ void setup(){
   tv1 = new Tv(105,380);
   bg = new achtergrond();
   text = new logoText(50, 95);
+  machine = new ArcadeMachine(350,500);
   logo = createFont("Outfit-ExtraBold.tff", 96);
 }
 
@@ -34,8 +36,11 @@ void draw(){
   updateTimer();
 //  tvKast1.display();
 //  tv1.display();
-
+  
   bg.display();
+  tv1.display();
+  tvKast1.display();
+  machine.display();
   window1.displayWindow(70, 120, 600, 580);
   text.display();
   
