@@ -7,13 +7,14 @@ class logoText {
   float[] letterX = new float[14];
   float[] letterY = new float[14];
   float[] speedY = new float[14];
-  float[] durability = new float[]{3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+  float[] durability = new float[14];
   boolean[] falling = new boolean[14]; // track which letters are dropping
   logoText(float x, float y) {
     xPos = x;
     yPos = y;
     for (int i = 0; i < letterY.length; i++) {
       letterY[i] = 95;
+      durability[i] = 3;
       speedY[i] = 0;
       falling[i] = false;
     }
