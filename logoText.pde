@@ -27,7 +27,7 @@ class logoText {
       text(letters[i], x, letterY[i]);
       letterX[i] = x;
       if (i==7) {
-        x += textWidth(letters[i])+75;
+        x += textWidth(letters[i])+45;
       } else
         x += textWidth(letters[i])+5;
     }

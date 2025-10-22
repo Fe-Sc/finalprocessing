@@ -14,9 +14,9 @@ void setup(){
   window1 = new Window();
   tv1 = new Tv(105,380);
   bg = new achtergrond();
-  text = new logoText(50, 95);
+  text = new logoText(25, 95);
   machine = new ArcadeMachine(350,500);
-  logo = createFont("Outfit-ExtraBold.tff", 96);
+  logo = loadFont("NirmalaUI-Bold-96.vlw");
 }
 
 void mousePressed(){
