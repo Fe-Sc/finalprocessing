@@ -4,6 +4,7 @@ Tv tv1;
 achtergrond bg;
 logoText text;
 ArcadeMachine machine;
+character ch1;
 
 int globalTimer = 0;
 PFont logo;
@@ -17,6 +18,7 @@ void setup(){
   text = new logoText(25, 95);
   machine = new ArcadeMachine(350,500);
   logo = loadFont("NirmalaUI-Bold-96.vlw");
+  ch1 = new character(0,0,"robotguy.png");
 }
 
 void mousePressed(){
@@ -43,5 +45,17 @@ void draw(){
   machine.display();
   window1.displayWindow(70, 120, 600, 580);
   text.display();
+  ch1.display();
+  ch1.grav();
   
+}
+
+void keyPressed(){
+  if (keyCode == LEFT){
+    ch1.moveLeft();
+  } else if (keyCode == RIGHT){
+    ch1.moveRight();
+  } else if (keyCode == UP){
+    ch1.jumping();
+  }
 }
