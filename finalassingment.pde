@@ -22,7 +22,7 @@ void setup(){
   shopLogo = new gameShopLogo(1130, 60);
   logo = loadFont("NirmalaUI-Bold-96.vlw");
   ch1 = new character(0,0,"robotguy.png");
-  marioStatue = new Statue(1025, 675);
+  marioStatue = new Statue(1100, 675);
 }
 
 void mousePressed(){
@@ -44,14 +44,14 @@ void draw(){
 //  tv1.display();
   
   bg.display();
-  /*tv1.display();
+  tv1.display();
   tvKast1.display();
   machine.display();
   window1.display();
   text.display();
   ch1.display();
   ch1.grav();
-  shopLogo.display();*/
+  shopLogo.display();
   marioStatue.display();
   
 }

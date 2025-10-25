@@ -8,12 +8,13 @@ class achtergrond{
     //Trying to make a kind of wooden background
     fill(#deb887);
     stroke(#000000);
+    strokeWeight(1);
     for (int i = 0; i < 12; i++){
       rect(70 + i * 50, 120, 50, 580);
     }
-   /* for (int i = 0; i < 5; i++){
+    for (int i = 0; i < 5; i++){
       rect(995 + i * 50, 120, 50, 580);
-    }*/
+    }
     //Making the doorway
     noStroke();
     fill(#3b3b3b);  
