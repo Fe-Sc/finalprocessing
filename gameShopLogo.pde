@@ -8,6 +8,7 @@ class gameShopLogo {
   }
   
   void drawLogo(){
+    noStroke();
     fill(#0a7ebd);
     circle(xPos, yPos, 90);
     fill(#FFFFFF);

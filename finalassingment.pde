@@ -5,6 +5,8 @@ achtergrond bg;
 logoText text;
 ArcadeMachine machine;
 character ch1;
+gameShopLogo shopLogo;
+Statue marioStatue;
 
 int globalTimer = 0;
 PFont logo;
@@ -12,13 +14,15 @@ PFont logo;
 void setup(){
   size(1200,700);
   tvKast1 = new TvKast(width/2,height/2);
-  window1 = new Window();
+  window1 = new Window(70, 120, 600, 580);
   tv1 = new Tv(105,380);
   bg = new achtergrond();
   text = new logoText(25, 95);
   machine = new ArcadeMachine(350,500);
+  shopLogo = new gameShopLogo(1130, 60);
   logo = loadFont("NirmalaUI-Bold-96.vlw");
   ch1 = new character(0,0,"robotguy.png");
+  marioStatue = new Statue(1025, 675);
 }
 
 void mousePressed(){
@@ -40,13 +44,15 @@ void draw(){
 //  tv1.display();
   
   bg.display();
-  tv1.display();
+  /*tv1.display();
   tvKast1.display();
   machine.display();
-  window1.displayWindow(70, 120, 600, 580);
+  window1.display();
   text.display();
   ch1.display();
   ch1.grav();
+  shopLogo.display();*/
+  marioStatue.display();
   
 }
 

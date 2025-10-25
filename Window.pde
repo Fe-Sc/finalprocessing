@@ -9,6 +9,14 @@ class Window {
   int xPos;
   int yPos;
 
+  Window(int x, int y, int w, int h){
+    xWindow = x;
+    yWindow = y;
+    windowWidth = w;
+    windowHeight = h;
+  }
+
+
   //Update the mouse position
   void Update(int mx, int my) {
     xPos = mx;
@@ -17,7 +25,7 @@ class Window {
  //   println(xPos + ", " + yPos);
   }
   //Draw the window (just a greyish transparant rectangle)
-  void window(int x, int y, int breed, int hoog) {
+  void makeWindow(int x, int y, int breed, int hoog) {
     noStroke();
     fill(#969ca1, 75);
     rect(x, y, breed, hoog);
@@ -36,14 +44,13 @@ class Window {
     line(x-20, y-10, x-10, y-30);
 
   }
+  
+  
   //display the window and save the chosen coordinates
-  void displayWindow(int x, int y, int w, int h) {
-    xWindow = x;
-    yWindow = y;
-    windowWidth = w;
-    windowHeight = h;
+  void drawWindow() {
+
     if (durability > 0) {
-      window(x, y, w, h);
+      makeWindow(xWindow, yWindow, windowWidth, windowHeight);
       drawCracks();
     }
   }
@@ -78,5 +85,9 @@ class Window {
     if (durability <= 1) {
       crackWindow(crackPos[4], crackPos[5]);
     }
+  }
+  
+  void display(){
+    drawWindow();
   }
 }
