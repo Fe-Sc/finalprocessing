@@ -6,6 +6,7 @@ class character {
   float jump = -5;
   PImage img;
   boolean jumping = true;
+  boolean visible = false;
 
   character(float initX, float initY, String imgPath) {
     x = initX;
@@ -14,20 +15,22 @@ class character {
   }
 
   void display() {
-    image(img, x, y);
+    if (visible) {
+      image(img, x, y);
+    }
   }
 
   void grav() {
     y = y + airspeed;
     airspeed = airspeed + grav;
-    if (y > height - 60) {
-      y = height - 60;
+    if (y < 350){
+      y = 350;
       airspeed = 0;
-    } else if (y < 500) {
+    }
+    else if ( y > 405){
+      y = 405;
+      airspeed = 0;
       jumping = false;
-    } else if (y < 600) {
-      y = 500;
-      airspeed = 0;
     }
   }
 
@@ -48,6 +51,11 @@ class character {
     x += 10;
     if (x > width-40) { //restrain bird to window
       x = width-40;
+    }
+  }
+  void onClick(float mouseX, float mouseY) {
+    if (mouseX > 365 && mouseX < 365+90 && mouseY > 350 && mouseY < 350 + 100) {
+      visible = !visible;
     }
   }
 }

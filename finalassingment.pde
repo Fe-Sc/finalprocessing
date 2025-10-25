@@ -7,61 +7,66 @@ ArcadeMachine machine;
 character ch1;
 gameShopLogo shopLogo;
 Statue marioStatue;
+ArcadeScreen screen;
 
 int globalTimer = 0;
 PFont logo;
 
-void setup(){
-  size(1200,700);
-  tvKast1 = new TvKast(width/2,height/2);
+void setup() {
+  size(1200, 700);
+  tvKast1 = new TvKast(width/2, height/2);
   window1 = new Window(70, 120, 600, 580);
-  tv1 = new Tv(105,380);
+  tv1 = new Tv(105, 380);
   bg = new achtergrond();
   text = new logoText(25, 95);
-  machine = new ArcadeMachine(350,500);
+  machine = new ArcadeMachine(350, 500);
   shopLogo = new gameShopLogo(1130, 60);
   logo = loadFont("NirmalaUI-Bold-96.vlw");
-  ch1 = new character(0,0,"robotguy.png");
+  ch1 = new character(365, 350, "robotguy.png");
   marioStatue = new Statue(1100, 675);
+  screen = new ArcadeScreen(365, 350);
 }
 
-void mousePressed(){
+void mousePressed() {
   window1.Update(mouseX, mouseY);
   text.onClick(mouseX, mouseY);
+  screen.onClick(mouseX, mouseY);
+  ch1.onClick(mouseX, mouseY);
 }
 
-void updateTimer(){
+void updateTimer() {
   globalTimer = globalTimer + 1;
-  if (globalTimer >60){
+  if (globalTimer >60) {
     globalTimer = 0;
   }
 }
 
-void draw(){
+void draw() {
   background(#FFFFFF);
   updateTimer();
-//  tvKast1.display();
-//  tv1.display();
-  
+  //  tvKast1.display();
+  //  tv1.display();
+
   bg.display();
   tv1.display();
   tvKast1.display();
   machine.display();
   window1.display();
   text.display();
-  ch1.display();
-  ch1.grav();
+
   shopLogo.display();
   marioStatue.display();
-  
+  screen.display();
+  ch1.display();
+  ch1.grav();
 }
 
-void keyPressed(){
-  if (keyCode == LEFT){
+void keyPressed() {
+  if (keyCode == LEFT) {
     ch1.moveLeft();
-  } else if (keyCode == RIGHT){
+  } else if (keyCode == RIGHT) {
     ch1.moveRight();
-  } else if (keyCode == UP){
+  } else if (keyCode == UP) {
     ch1.jumping();
   }
 }
