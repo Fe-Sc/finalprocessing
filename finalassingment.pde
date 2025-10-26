@@ -66,6 +66,7 @@ void draw() {
   ch1.display();
   ch1.grav();
   text.display();
+  println(mouseX);
 }
 
 void keyPressed() {
