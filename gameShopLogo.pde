@@ -1,4 +1,5 @@
 class gameShopLogo {
+  //Function to draw the logo at the top left
   float xPos;
   float yPos;
   

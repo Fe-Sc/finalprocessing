@@ -1,5 +1,5 @@
 class Statue{
-  
+  //Class to draw a mario statue
   float xPos, yPos;
   
   Statue(float x, float y){

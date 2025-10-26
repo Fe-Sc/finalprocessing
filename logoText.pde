@@ -57,18 +57,18 @@ class logoText {
     }
   }
 
-
+  
   void updateText() {
     for (int i = 0; i <14; i++) {
-
+    
         if (shakeTimer[i] > 0) {
-        shakeOffset[i] = random(-3, 3); // shake left/right 3px
+        shakeOffset[i] = random(-3, 3); // shake left/right
         shakeTimer[i]--;
       } else {
         shakeOffset[i] = 0;
       }
       
-      
+        
       if (falling[i]) {
         speedY[i] += gravity;
         letterY[i] += speedY[i];
@@ -79,8 +79,7 @@ class logoText {
           falling[i] = false;
         }
       }
-      //println(letterX);
-      //println(letterY);
+
     }
   }
 
