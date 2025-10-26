@@ -36,6 +36,10 @@ class Game{
     if (dragging ){
     x = mx-xOffset;
     y= my-yOffset;}
+    if (x < 0) x=0;
+    if (x > 1175) x = 1175;
+    if (y > 700-imgHeight) y = 700-imgHeight;
+    if (y < 0) y = 0;
   }
   
   void onRelease(){
@@ -43,7 +47,7 @@ class Game{
   }
   
   void update(){
-    if (!dragging && pickedUp && y < 700-imgHeight){
+    if (!dragging && pickedUp && y <= 700-imgHeight){
       y = y + speed;
       speed = speed + gravity;
       if(y >= 700-imgHeight){

@@ -29,7 +29,7 @@ class Tv {
   }
 
   void onClick(float mx, float my) {
-    if (mx > x-40 && mx < x+130 && my > y-95 && my < y+80 && window1.isBroken) {
+    if (mx > x-40 && mx < x+130 && my > y-95 && my < y-15 && window1.isBroken) {
       isOn = !isOn;
     }
   }
