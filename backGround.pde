@@ -9,6 +9,7 @@ class background{
     fill(#deb887);
     stroke(#000000);
     strokeWeight(1);
+    //Loop to draw planks in background
     for (int i = 0; i < 12; i++){
       rect(70 + i * 50, 120, 50, 580);
     }
