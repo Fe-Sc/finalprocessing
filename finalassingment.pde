@@ -19,10 +19,10 @@ PFont logo;
 
 void setup() {
   size(1200, 700);
-  tvKast1 = new TvKast(width/2, height/2);
+  tvKast1 = new TvKast(110, 400);
   window1 = new Window(70, 120, 600, 580);
   window2 = new Window(995, 120, 205, 680);
-  tv1 = new Tv(105, 380);
+  tv1 = new Tv(115, 380);
   bg = new achtergrond();
   logo = loadFont("NirmalaUI-Bold-96.vlw");
   text = new logoText(25, 95);
@@ -43,6 +43,7 @@ void mousePressed() {
   screen.onClick(mouseX, mouseY);
   ch1.onClick(mouseX, mouseY);
   game1.onClick(mouseX, mouseY);
+  tv1.onClick(mouseX, mouseY);
 }
 
 void mouseDragged(){

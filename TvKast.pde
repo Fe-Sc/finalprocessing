@@ -11,6 +11,6 @@ class TvKast {
   void display() {
     fill(#C4C4C4);
     stroke(#C4C4C4);
-    rect(100,400, 100, 300);
+    rect(x,y, 100, 300);
   }
 }
