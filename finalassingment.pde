@@ -19,7 +19,6 @@ Game game1;
 Game game2;
 Game game3;
 Game game4;
-poster poster1;
 
 
 
@@ -42,11 +41,10 @@ void setup() {
   marioStatue = new Statue(1100, 675);
   screen = new ArcadeScreen(365, 350);
   shelf1 = new Shelf(500, 300);
-  game1 = new Game(520, 390, "boxcover.png", 30, 40);
-  game2 = new Game(580, 390, "boxcover2.png", 30, 40);
-  game3 = new Game(520, 515, "boxcover3.png", 30, 40);
-  game4 = new Game(580, 515, "boxcover2.png", 30, 40);
-  poster1 = new poster();
+  game1 = new Game(520, 390, "boxcover.png", 30, 40, 1);
+  game2 = new Game(580, 390, "boxcover2.png", 30, 40,1);
+  game3 = new Game(520, 515, "boxcover3.png", 30, 40,1);
+  game4 = new Game(580, 515, "boxcover2.png", 30, 40,1);
 }
 
 
@@ -110,7 +108,6 @@ void draw() {
   window1.display();
   println(mouseX);
   println(mouseY);
-  poster1.display();
 }
 
 void keyPressed() {

@@ -1,12 +1,12 @@
-class Shelf{
+class Shelf {
   float xPos, yPos;
-  
-  Shelf(float x, float y){
+
+  Shelf(float x, float y) {
     xPos = x;
     yPos = y;
   }
-  
-  void drawShelf(){
+
+  void drawShelf() {
     fill(#262626);
     rect(xPos, yPos, 150, 400);
     fill(#080808);
@@ -15,11 +15,10 @@ class Shelf{
     rect(xPos + 10, yPos + 125, 130, 10);
     rect(xPos + 10, yPos + 250, 130, 10);
   }
-  
-  
-  
-  void display(){
+
+
+
+  void display() {
     drawShelf();
   }
-  
 }

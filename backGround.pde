@@ -16,13 +16,15 @@ class background{
     for (int i = 0; i < 5; i++){
       rect(995 + i * 50, 120, 50, 580);
     }
+    //Adding display for action figures
+    fill(#B9BBB6);
+    rect(1035, 300, 125, 10);
     //Making the doorway
     noStroke();
     fill(#3b3b3b);  
     rect(670, 120, 25, 580);
     rect(670, 120, 300, 45);
     rect(970, 120, 25, 580);
-
   }
   
   void display(){
