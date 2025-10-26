@@ -2,7 +2,7 @@
 //Summary: Gameshop Twente in Enschede
 
 
-TvKast tvKast1;
+TVShelf tvshelf1;
 Window window1;
 Window window2;
 Tv tv1;
@@ -27,7 +27,7 @@ PFont logo;
 
 void setup() {
   size(1200, 700);
-  tvKast1 = new TvKast(110, 400);
+  tvshelf1 = new TVShelf(110, 400);
   window1 = new Window(70, 120, 600, 580);
   window2 = new Window(995, 120, 205, 680);
   tv1 = new Tv(115, 380);
@@ -91,7 +91,7 @@ void draw() {
   bg.display();
   door.display();
   tv1.display();
-  tvKast1.display();
+  tvshelf1.display();
   machine.display();
   shelf1.display();
   shopLogo.display();
