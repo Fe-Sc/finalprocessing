@@ -33,9 +33,7 @@ class Game {
   }
 
 
-
-
-
+ 
   void onDrag(float mx, float my) {
     if (dragging ) {
       x = mx-xOffset;
@@ -53,7 +51,6 @@ class Game {
 
   void update() {
     if (!dragging && pickedUp && y <= 700-imgHeight) {
-
       y = y + speed;
       speed = speed + gravity;
       if (y >= 700-imgHeight) {

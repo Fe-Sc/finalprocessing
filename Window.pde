@@ -23,7 +23,6 @@ class Window {
     xPos = mx;
     yPos = my;
     breakWindow(xPos, yPos);
- //   println(xPos + ", " + yPos);
   }
   //Draw the window (just a greyish transparant rectangle)
   void makeWindow(int x, int y, int breed, int hoog) {
@@ -33,16 +32,8 @@ class Window {
   }
 //Draw the cracks based on position (x, y)
   void crackWindow(int x, int y) {
-   //cracks zien er ass uit moet nog fixen
     stroke(#000000);
-    /*line(x, y, x-10, y-30);
-    line(x-10, y-30, x-20, y-40);
-    line(x-10, y-30, x, y-50);
-    line(x, y, x+20, y+10);
-    line(x, y, x-30, y+15);
-    line(x, y, x-20, y-10);
-    line(x-20, y-10, x-35, y);
-    line(x-20, y-10, x-10, y-30);*/
+
     
     line(x-15, y, x-5, y+10);
     line(x-5, y+10, x+15, y+8);

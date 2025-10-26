@@ -1,3 +1,6 @@
+//Authors: Fernando Schintz & Koen Stroo
+//Summary: Gameshop Twente in Enschede
+
 
 TvKast tvKast1;
 Window window1;
@@ -40,12 +43,10 @@ void setup() {
   shelf1 = new Shelf(500, 300);
   game1 = new Game(520, 390, "boxcover.png", 30, 40);
   game2 = new Game(580, 390, "boxcover2.png", 30, 40);
-
-  game3 = new Game(620, 390, "boxcover3.png", 30, 40);
-  game4 = new Game(530, 512, "boxcover3.png", 30, 40);
-  game3 = new Game(580, 515, "boxcover3.png", 30, 40);
-
+  game3 = new Game(520, 515, "boxcover3.png", 30, 40);
+  game4 = new Game(580, 515, "boxcover2.png", 30, 40);
 }
+
 
 void mousePressed() {
   window1.Update(mouseX, mouseY);
@@ -57,11 +58,8 @@ void mousePressed() {
   tv1.onClick(mouseX, mouseY);
   game2.onClick(mouseX, mouseY);
   game3.onClick(mouseX, mouseY);
-
   game4.onClick(mouseX, mouseY);
-
-
-
+  door.onClick(mouseX, mouseY);
 }
 
 void mouseDragged() {
@@ -76,9 +74,7 @@ void mouseReleased() {
   game1.onRelease();
   game2.onRelease();
   game3.onRelease();
-
   game4.onRelease();
-
 
 }
 
@@ -102,18 +98,13 @@ void draw() {
   marioStatue.display();
   screen.display();
   window2.display();
-  
   ch1.display();
   ch1.grav();
   text.display();
-  println(mouseX); //debugging
-  println(mouseY); //debugging
   game1.display();
   game2.display();
   game3.display();
-
   game4.display();
-
   window1.display();
 
 }
