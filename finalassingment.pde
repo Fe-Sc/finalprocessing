@@ -10,6 +10,7 @@ gameShopLogo shopLogo;
 Statue marioStatue;
 ArcadeScreen screen;
 Door door;
+Shelf shelf1;
 
 
 int globalTimer = 0;
@@ -30,6 +31,7 @@ void setup() {
   ch1 = new character(365, 350, "robotguy.png");
   marioStatue = new Statue(1100, 675);
   screen = new ArcadeScreen(365, 350);
+  shelf1 = new Shelf(500, 300);
 }
 
 void mousePressed() {
@@ -50,23 +52,20 @@ void updateTimer() {
 void draw() {
   background(#FFFFFF);
   updateTimer();
-  //  tvKast1.display();
-  //  tv1.display();
-
   bg.display();
+  door.display();
   tv1.display();
   tvKast1.display();
   machine.display();
-  window1.display();
-  text.display();
+  shelf1.display();
   shopLogo.display();
   marioStatue.display();
   screen.display();
   window2.display();
-  door.display();
+  window1.display();
   ch1.display();
   ch1.grav();
-  door.display();
+  text.display();
 }
 
 void keyPressed() {
