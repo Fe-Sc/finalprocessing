@@ -43,14 +43,14 @@ class character {
 
   void moveLeft() {
     x -= 10;
-    if (x < 40) { //restrain bird to window
-      x = 40;
+    if (x < 331) { 
+      x = 331;
     }
   }
   void moveRight() {
     x += 10;
-    if (x > width-40) { //restrain bird to window
-      x = width-40;
+    if (x > 405) { 
+      x = 405;
     }
   }
   void onClick(float mouseX, float mouseY) {
