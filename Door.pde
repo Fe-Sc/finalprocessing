@@ -32,7 +32,7 @@ class Door {
     if (rightOpen) {
       stroke(#000000);
       fill(#969ca1, 75);
-      rect(xPos+175+38, yPos, 62, 700-yPos);
+      rect(xPos+175+31, yPos, 69, 700-yPos);
     }
   }
 
