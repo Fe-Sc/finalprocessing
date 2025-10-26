@@ -25,7 +25,6 @@ class Tv {
     if (!isOn) tvColor = color(#000000);
     fill(tvColor);
     rect(x-25, y-85, 140, 60);
-    println(isOn);
   }
 
   void onClick(float mx, float my) {

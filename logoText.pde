@@ -44,7 +44,6 @@ class logoText {
   void onClick(float x, float y) {
     mx = x;
     my = y;
-    println(mx + ", " + my);
     for (int i = 0; i <14; i++) {
       if (durability[i] > 0) {
         if (mx > letterX[i] && mx < letterX[i] + textWidth(letters[i]) && my < letterY[i]) {

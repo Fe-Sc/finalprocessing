@@ -1,3 +1,6 @@
+//Authors: Fernando Schintz & Koen Stroo
+//Summary: Gameshop Twente in Enschede
+
 
 TvKast tvKast1;
 Window window1;
@@ -95,12 +98,9 @@ void draw() {
   marioStatue.display();
   screen.display();
   window2.display();
-  
   ch1.display();
   ch1.grav();
   text.display();
-  println(mouseX); //debugging
-  println(mouseY); //debugging
   game1.display();
   game2.display();
   game3.display();
