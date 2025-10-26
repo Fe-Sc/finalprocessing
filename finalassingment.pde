@@ -40,7 +40,8 @@ void setup() {
   shelf1 = new Shelf(500, 300);
   game1 = new Game(520, 390, "boxcover.png", 30, 40);
   game2 = new Game(580, 390, "boxcover2.png", 30, 40);
-
+  game3 = new Game(520, 515, "boxcover3.png", 30, 40);
+  game4 = new Game(580, 515, "boxcover2.png", 30, 40);
 }
 
 

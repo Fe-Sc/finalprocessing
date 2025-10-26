@@ -31,25 +31,14 @@ class Game {
       }
     } else dragging = false;
   }
-<<<<<<< HEAD
-
-  
-  void onDrag(float mx, float my){
-    if (dragging ){
-    x = mx-xOffset;
-    y= my-yOffset;}
-=======
 
 
-
-
-
+ 
   void onDrag(float mx, float my) {
     if (dragging ) {
       x = mx-xOffset;
       y= my-yOffset;
     }
->>>>>>> 8d611a4c653c297c12b12459c01d6d5de3e7b833
     if (x < 0) x=0;
     if (x > 1175) x = 1175;
     if (y > 700-imgHeight) y = 700-imgHeight;
@@ -60,15 +49,8 @@ class Game {
     dragging = false;
   }
 
-<<<<<<< HEAD
-  
-  void update(){
-    if (!dragging && pickedUp && y <= 700-imgHeight){
-=======
   void update() {
     if (!dragging && pickedUp && y <= 700-imgHeight) {
-
->>>>>>> 8d611a4c653c297c12b12459c01d6d5de3e7b833
       y = y + speed;
       speed = speed + gravity;
       if (y >= 700-imgHeight) {
