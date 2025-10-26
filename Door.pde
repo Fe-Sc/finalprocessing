@@ -9,6 +9,7 @@ class Door {
   }
 
   void drawDoor() {
+    //checking if door is open and draws the right shape
     if (!leftOpen) {
       stroke(#000000);
       fill(#969ca1, 75);

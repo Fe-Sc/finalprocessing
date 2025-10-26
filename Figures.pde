@@ -7,7 +7,6 @@ class Figure {
   float airspeed = 0;
   float jump = -5;
   float grav = 0.2;
-  boolean jumping = false;
 
 
   Figure(float initX, float initY, String imgpath) {
