@@ -1,4 +1,4 @@
-class achtergrond{
+class background{
   
   void bg(){
     noStroke();

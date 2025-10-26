@@ -3,7 +3,7 @@ TvKast tvKast1;
 Window window1;
 Window window2;
 Tv tv1;
-achtergrond bg;
+background bg;
 logoText text;
 ArcadeMachine machine;
 character ch1;
@@ -28,7 +28,7 @@ void setup() {
   window1 = new Window(70, 120, 600, 580);
   window2 = new Window(995, 120, 205, 680);
   tv1 = new Tv(115, 380);
-  bg = new achtergrond();
+  bg = new background();
   logo = loadFont("NirmalaUI-Bold-96.vlw");
   text = new logoText(25, 95);
   machine = new ArcadeMachine(350, 500);
