@@ -40,8 +40,7 @@ void setup() {
   shelf1 = new Shelf(500, 300);
   game1 = new Game(520, 390, "boxcover.png", 30, 40);
   game2 = new Game(580, 390, "boxcover2.png", 30, 40);
-  game3 = new Game(620, 390, "boxcover3.png", 30, 40);
-  game4 = new Game(530, 512, "boxcover3.png", 30, 40);
+
 }
 
 
@@ -57,7 +56,6 @@ void mousePressed() {
   game3.onClick(mouseX, mouseY);
   game4.onClick(mouseX, mouseY);
   door.onClick(mouseX, mouseY);
-
 }
 
 void mouseDragged() {
@@ -65,6 +63,7 @@ void mouseDragged() {
   game2.onDrag(mouseX, mouseY);
   game3.onDrag(mouseX, mouseY);
   game4.onDrag(mouseX, mouseY);
+
 }
 
 void mouseReleased() {
@@ -72,6 +71,7 @@ void mouseReleased() {
   game2.onRelease();
   game3.onRelease();
   game4.onRelease();
+
 }
 
 void updateTimer() {
@@ -105,6 +105,7 @@ void draw() {
   game3.display();
   game4.display();
   window1.display();
+
 }
 
 void keyPressed() {
