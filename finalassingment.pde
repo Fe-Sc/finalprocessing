@@ -11,6 +11,7 @@ Statue marioStatue;
 ArcadeScreen screen;
 Door door;
 Shelf shelf1;
+Game game1;
 
 
 int globalTimer = 0;
@@ -32,6 +33,7 @@ void setup() {
   marioStatue = new Statue(1100, 675);
   screen = new ArcadeScreen(365, 350);
   shelf1 = new Shelf(500, 300);
+  game1 = new Game(520,390,"boxcover.png", 30, 40);
 }
 
 void mousePressed() {
@@ -66,15 +68,25 @@ void draw() {
   ch1.display();
   ch1.grav();
   text.display();
-  println(mouseX);
+  println(mouseX); //debugging
+  println(mouseY); //debugging
+  game1.display();
 }
 
 void keyPressed() {
   if (keyCode == LEFT) {
     ch1.moveLeft();
+    machine.moveleft();
   } else if (keyCode == RIGHT) {
     ch1.moveRight();
+    machine.moveright();
   } else if (keyCode == UP) {
     ch1.jumping();
+  }
+}
+
+void keyReleased() {
+  if (keyCode == LEFT || keyCode == RIGHT) {
+    machine.reset();
   }
 }
