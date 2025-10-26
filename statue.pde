@@ -25,10 +25,10 @@ class Statue{
     rect(xPos - 35, yPos - 25, 20, 10);
     rect(xPos + 15, yPos - 25, 20, 10);
     //Torso
-    fill(#ff0000);
+    fill(#B600FF);
     rect(xPos-40, yPos-180, 80, 80);
     //Pants
-    fill(#0000ff);
+    fill(#E8F55E);
     rect(xPos-40, yPos - 100, 30, 75);
     rect(xPos+10, yPos - 100, 30, 75);
     rect(xPos -40, yPos - 140, 80, 60);
@@ -39,7 +39,7 @@ class Statue{
     circle(xPos-25, yPos - 135, 10);
     circle(xPos+25, yPos - 135, 10);
     //Arms
-    fill(#ff0000);
+    fill(#B600FF);
     rect(xPos - 55, yPos -180, 20, 60, 10);
     rect(xPos +35, yPos -180, 20, 60, 10);
     //Gloves
@@ -52,18 +52,18 @@ class Statue{
     fill(#fed1b0);
     circle(xPos, yPos-215, 80);
     //Hat
-    fill(#ff0000);
+    fill(#E8F55E);
     ellipse(xPos, yPos-245, 75, 60);
     stroke(#000000);
     fill(#FFFFFF);
     circle(xPos, yPos-260, 20);
-    fill(#ff0000);
+    fill(#C3CE4B);
     ellipse(xPos, yPos-245, 60, 20);
     textSize(15);
     text("M", xPos-7, yPos-255);
     textSize(96);
     noStroke();
-    fill(#fed1b0);
+    fill(#A8B242);
     ellipse(xPos, yPos-234, 70, 32);
     //moustache
     fill(#541800);
