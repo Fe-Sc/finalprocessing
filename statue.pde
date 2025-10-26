@@ -63,7 +63,7 @@ class Statue{
     text("M", xPos-7, yPos-255);
     textSize(96);
     noStroke();
-    fill(#A8B242);
+    fill(#fed1b0);
     ellipse(xPos, yPos-234, 70, 32);
     //moustache
     fill(#541800);
