@@ -12,6 +12,8 @@ ArcadeScreen screen;
 Door door;
 Shelf shelf1;
 Game game1;
+Game game2;
+Game game3;
 
 
 int globalTimer = 0;
@@ -33,7 +35,8 @@ void setup() {
   marioStatue = new Statue(1100, 675);
   screen = new ArcadeScreen(365, 350);
   shelf1 = new Shelf(500, 300);
-  game1 = new Game(520,390,"boxcover.png", 30, 40);
+  game1 = new Game(520, 390, "boxcover.png", 30, 40);
+  game2 = new Game(580, 390, "boxcover2.png", 30, 40);
 }
 
 void mousePressed() {
@@ -44,14 +47,17 @@ void mousePressed() {
   ch1.onClick(mouseX, mouseY);
   game1.onClick(mouseX, mouseY);
   tv1.onClick(mouseX, mouseY);
+  game2.onClick(mouseX, mouseY);
 }
 
-void mouseDragged(){
+void mouseDragged() {
   game1.onDrag(mouseX, mouseY);
+  game2.onDrag(mouseX, mouseY);
 }
 
-void mouseReleased(){
+void mouseReleased() {
   game1.onRelease();
+  game2.onRelease();
 }
 
 void updateTimer() {
@@ -81,17 +87,20 @@ void draw() {
   println(mouseX); //debugging
   println(mouseY); //debugging
   game1.display();
+  game2.display();
 }
 
 void keyPressed() {
-  if (keyCode == LEFT) {
-    ch1.moveLeft();
-    machine.moveleft();
-  } else if (keyCode == RIGHT) {
-    ch1.moveRight();
-    machine.moveright();
-  } else if (keyCode == UP) {
-    ch1.jumping();
+  if (window1.isBroken) {
+    if (keyCode == LEFT) {
+      ch1.moveLeft();
+      machine.moveleft();
+    } else if (keyCode == RIGHT) {
+      ch1.moveRight();
+      machine.moveright();
+    } else if (keyCode == UP) {
+      ch1.jumping();
+    }
   }
 }
 

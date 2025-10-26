@@ -23,11 +23,10 @@ class character {
   void grav() {
     y = y + airspeed;
     airspeed = airspeed + grav;
-    if (y < 350){
+    if (y < 350) {
       y = 350;
       airspeed = 0;
-    }
-    else if ( y > 405){
+    } else if ( y > 405) {
       y = 405;
       airspeed = 0;
       jumping = false;
@@ -35,22 +34,28 @@ class character {
   }
 
   void jumping() {
-    if (jumping == false) {
-      airspeed = jump;
-      jumping = true;
+    if (screen.IsOn) {
+      if (jumping == false) {
+        airspeed = jump;
+        jumping = true;
+      }
     }
   }
 
   void moveLeft() {
-    x -= 10;
-    if (x < 331) { 
-      x = 331;
+    if (screen.IsOn) {
+      x -= 10;
+      if (x < 331) {
+        x = 331;
+      }
     }
   }
   void moveRight() {
-    x += 10;
-    if (x > 405) { 
-      x = 405;
+    if (screen.IsOn) {
+      x += 10;
+      if (x > 405) {
+        x = 405;
+      }
     }
   }
   void onClick(float mx, float my) {
