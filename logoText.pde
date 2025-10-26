@@ -3,14 +3,14 @@ class logoText {
   float yPos;
   float mx, my;
   float gravity = 0.5;
-  String[] letters = new String[]{"G", "A", "M", "E", "S", "H", "O", "P", "T", "W", "E", "N", "T", "E"};
-  float[] letterX = new float[14];
-  float[] letterY = new float[14];
-  float[] speedY = new float[14];
-  float[] durability = new float[14];
-  boolean[] falling = new boolean[14]; // track which letters are dropping
-  float[] shakeOffset = new float[14];
-  float[] shakeTimer = new float[14];
+  String[] letters = new String[]{"G", "A", "M", "E", "S", "H", "O", "P"};
+  float[] letterX = new float[8];
+  float[] letterY = new float[8];
+  float[] speedY = new float[8];
+  float[] durability = new float[8];
+  boolean[] falling = new boolean[8]; // track which letters are dropping
+  float[] shakeOffset = new float[8];
+  float[] shakeTimer = new float[8];
   
   //Constructors
   logoText(float x, float y) {
@@ -44,7 +44,7 @@ class logoText {
   void onClick(float x, float y) {
     mx = x;
     my = y;
-    for (int i = 0; i <14; i++) {
+    for (int i = 0; i <8; i++) {
       if (durability[i] > 0) {
         if (mx > letterX[i] && mx < letterX[i] + textWidth(letters[i]) && my < letterY[i]) {
           println(letters[i]);
@@ -59,7 +59,7 @@ class logoText {
 
   
   void updateText() {
-    for (int i = 0; i <14; i++) {
+    for (int i = 0; i <8; i++) {
     
         if (shakeTimer[i] > 0) {
         shakeOffset[i] = random(-3, 3); // shake left/right
