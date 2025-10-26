@@ -1,4 +1,5 @@
 class Shelf {
+  //Code to draw game shelf
   float xPos, yPos;
 
   Shelf(float x, float y) {

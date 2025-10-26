@@ -1,7 +1,7 @@
 //Authors: Fernando Schintz & Koen Stroo
 //Summary: Gameshop Twente in Enschede
 
-
+//Call each class object
 TVShelf tvshelf1;
 Window window1;
 Window window2;
@@ -24,7 +24,7 @@ Figure figure2;
 Figure figure3;
 
 
-
+//make a global variable called timer
 int globalTimer = 0;
 PFont logo;
 
@@ -53,7 +53,7 @@ void setup() {
   figure3 = new Figure(1103,268,"figure3.png");
 }
 
-
+//Update all mouse positions for each interaction
 void mousePressed() {
   window1.Update(mouseX, mouseY);
   window2.Update(mouseX, mouseY);
@@ -71,6 +71,7 @@ void mousePressed() {
   figure3.onClick(mouseX,mouseY);
 }
 
+
 void mouseDragged() {
   game1.onDrag(mouseX, mouseY);
   game2.onDrag(mouseX, mouseY);
@@ -86,7 +87,7 @@ void mouseReleased() {
   game4.onRelease();
 
 }
-
+//Update timer for TV use
 void updateTimer() {
   globalTimer = globalTimer + 1;
   if (globalTimer >60) {
@@ -106,7 +107,7 @@ void draw() {
   shopLogo.display();
   marioStatue.display();
   screen.display();
-  window2.display();
+
   ch1.display();
   ch1.grav();
   text.display();
@@ -114,13 +115,15 @@ void draw() {
   game2.display();
   game3.display();
   game4.display();
-  window1.display();
+
   figure1.grav();
   figure2.grav();
   figure3.grav();
   figure1.display();
   figure2.display();
   figure3.display();
+  window1.display();
+  window2.display();
 }
 
 void keyPressed() {

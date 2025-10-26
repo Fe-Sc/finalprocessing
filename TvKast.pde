@@ -2,7 +2,7 @@ class TVShelf {
   float x;
   float y;
 
-// Cool shelf for tv
+// Shelf for tv
   TVShelf(float initX, float initY) {
     x = initX;
     y = initY;

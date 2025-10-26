@@ -1,4 +1,5 @@
 class ArcadeMachine {
+  //Class to draw the arcade machine
   float x;
   float y;
   boolean moving = false;
@@ -58,6 +59,8 @@ class ArcadeMachine {
     fill(#4c4c4c);
     rect(x+15, y-150, 90, 100);
   }
+  
+  //Functions to move joysticks
   void moveright() {
     moveright = true;
     moving = true;

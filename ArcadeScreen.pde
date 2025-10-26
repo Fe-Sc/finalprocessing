@@ -1,4 +1,5 @@
 class ArcadeScreen {
+  //Class for the screen of the machine
   boolean IsOn  = false;
   float x;
   float y;
@@ -7,7 +8,7 @@ class ArcadeScreen {
     x = initX;
     y = initY;
   }
-
+  //Draw the screen
   void display() {
     if (IsOn) {
       fill(#98E9FF);
@@ -18,7 +19,7 @@ class ArcadeScreen {
       rect(x, y, 90, 100);
     }
   }
-
+//Check if click in on screen after window has been broken
   void onClick(float mx, float my) {
     if (mx > x && mx < x+90 && my > y && my < y + 100 && window1.isBroken) {
       IsOn = !IsOn;

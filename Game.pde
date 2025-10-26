@@ -11,7 +11,7 @@ class Game {
   boolean pickedUp;
   float gravity = 0.5;
   float speed = 1;
-
+  
   Game(float initX, float initY, String imgpath, int w, int h) {
     x = initX;
     y = initY;
@@ -21,7 +21,7 @@ class Game {
     img = loadImage(imgpath);
     img.resize(w, h);
   }
-
+  //Register if click is on the game box, and start moving if it is and the window has been broken
   void onClick(float mx, float my) {
     if (mx > x && mx < x + imgWidth && my > y && my < y + imgHeight) {
       xOffset = mx - x;
@@ -36,22 +36,23 @@ class Game {
 
 
 
-
+//Move the box based on mouse position
 void onDrag(float mx, float my) {
   if (dragging ) {
     x = mx-xOffset;
     y= my-yOffset;
   }
+  //keep within window bounds
   if (x < 0) x=0;
   if (x > 1175) x = 1175;
   if (y > 700-imgHeight) y = 700-imgHeight;
   if (y < 0) y = 0;
 }
-
+//Drop on release
 void onRelease() {
   dragging = false;
 }
-
+//Make the box drop if it has been picked up and isnt being dragged around
 void update() {
   if (!dragging && pickedUp && y <= 700-imgHeight) {
     y = y + speed;

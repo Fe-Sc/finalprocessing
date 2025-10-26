@@ -17,6 +17,7 @@ class Figure {
   }
 
   void display() {
+    
     image(img, x, y, w, h);
     noFill();
   }
