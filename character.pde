@@ -20,7 +20,7 @@ class character {
     }
   }
 
-  void grav() {
+  void grav() { //main gravity function
     y = y + airspeed;
     airspeed = airspeed + grav;
     if (y < 350) {
@@ -29,13 +29,13 @@ class character {
     } else if ( y > 405) {
       y = 405;
       airspeed = 0;
-      jumping = false;
+      jumping = false; 
     }
   }
 
-  void jumping() {
+  void jumping() { 
     if (screen.IsOn) {
-      if (jumping == false) {
+      if (jumping == false) { //character only jumps if not jumping
         airspeed = jump;
         jumping = true;
       }
@@ -58,6 +58,7 @@ class character {
       }
     }
   }
+  //checks if clicking on the screen
   void onClick(float mx, float my) {
     if (mx > 365 && mx < 365+90 && my > 350 && my < 350 + 100 && window1.isBroken) {
       visible = !visible;
