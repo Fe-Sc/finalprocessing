@@ -19,8 +19,8 @@ class ArcadeScreen {
     }
   }
 
-  void onClick(float mouseX, float mouseY) {
-    if (mouseX > x && mouseX < x+90 && mouseY > y && mouseY < y + 100) {
+  void onClick(float mx, float my) {
+    if (mx > x && mx < x+90 && my > y && my < y + 100 && window1.isBroken) {
       IsOn = !IsOn;
     }
   }

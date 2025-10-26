@@ -8,6 +8,7 @@ class Window {
   int[] crackPos = new int[6];
   int xPos;
   int yPos;
+  boolean isBroken;
 
   Window(int x, int y, int w, int h){
     xWindow = x;
@@ -75,6 +76,11 @@ class Window {
     if (durability > 0) {
       makeWindow(xWindow, yWindow, windowWidth, windowHeight);
       drawCracks();
+      
+
+    }
+     if (durability == 0){
+     isBroken = true; 
     }
   }
 

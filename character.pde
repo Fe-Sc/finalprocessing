@@ -53,8 +53,8 @@ class character {
       x = 405;
     }
   }
-  void onClick(float mouseX, float mouseY) {
-    if (mouseX > 365 && mouseX < 365+90 && mouseY > 350 && mouseY < 350 + 100) {
+  void onClick(float mx, float my) {
+    if (mx > 365 && mx < 365+90 && my > 350 && my < 350 + 100 && window1.isBroken) {
       visible = !visible;
     }
   }

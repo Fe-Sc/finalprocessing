@@ -42,6 +42,15 @@ void mousePressed() {
   text.onClick(mouseX, mouseY);
   screen.onClick(mouseX, mouseY);
   ch1.onClick(mouseX, mouseY);
+  game1.onClick(mouseX, mouseY);
+}
+
+void mouseDragged(){
+  game1.onDrag(mouseX, mouseY);
+}
+
+void mouseReleased(){
+  game1.onRelease();
 }
 
 void updateTimer() {
