@@ -28,11 +28,18 @@ class Door {
       stroke(#000000);
       fill(#969ca1, 75);
       rect(xPos, yPos, 69, 700-yPos);
+      noStroke();
+      fill(#7D7D7D);
+      rect(xPos + 69, yPos, 69, 700-yPos);
     }
     if (rightOpen) {
       stroke(#000000);
       fill(#969ca1, 75);
       rect(xPos+175+31, yPos, 69, 700-yPos);
+      noStroke();
+      fill(#7D7D7D);
+      rect(xPos+275/2, yPos, 69, 700-yPos);
+      
     }
   }
 
