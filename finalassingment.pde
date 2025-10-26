@@ -72,9 +72,17 @@ void draw() {
 void keyPressed() {
   if (keyCode == LEFT) {
     ch1.moveLeft();
+    machine.moveleft();
   } else if (keyCode == RIGHT) {
     ch1.moveRight();
+    machine.moveright();
   } else if (keyCode == UP) {
     ch1.jumping();
+  }
+}
+
+void keyReleased() {
+  if (keyCode == LEFT || keyCode == RIGHT) {
+    machine.reset();
   }
 }
