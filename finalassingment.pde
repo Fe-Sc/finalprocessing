@@ -9,6 +9,8 @@ character ch1;
 gameShopLogo shopLogo;
 Statue marioStatue;
 ArcadeScreen screen;
+Door door;
+
 
 int globalTimer = 0;
 PFont logo;
@@ -24,7 +26,7 @@ void setup() {
   text = new logoText(25, 95);
   machine = new ArcadeMachine(350, 500);
   shopLogo = new gameShopLogo(1130, 60);
-  
+  door = new Door(695, 164);
   ch1 = new character(365, 350, "robotguy.png");
   marioStatue = new Statue(1100, 675);
   screen = new ArcadeScreen(365, 350);
@@ -61,8 +63,10 @@ void draw() {
   marioStatue.display();
   screen.display();
   window2.display();
+  door.display();
   ch1.display();
   ch1.grav();
+  door.display();
 }
 
 void keyPressed() {
