@@ -18,9 +18,10 @@ class Figure {
 
   void display() {
     image(img, x, y, w, h);
+    noFill();
   }
   void onClick(float mx, float my) {
-    if (mx > x && mx < x + w && my > y && my < y+h && window2.isBroken && jumping == false) {
+    if (mx > x && mx < x + w && my > y && my < y+h && window2.isBroken) {
       airspeed = jump;
     }
   }
@@ -31,9 +32,9 @@ class Figure {
     if (y > 268) {
       y = 267;
       airspeed = 0;
-      jumping = false;
-    } else {
-      jumping = true;
+    } else if (y<0) {
+      y = 0;
+      airspeed = 0;
     }
   }
 }
