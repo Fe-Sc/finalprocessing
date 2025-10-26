@@ -19,6 +19,7 @@ Game game1;
 Game game2;
 Game game3;
 Game game4;
+poster poster1;
 
 
 
@@ -45,6 +46,7 @@ void setup() {
   game2 = new Game(580, 390, "boxcover2.png", 30, 40);
   game3 = new Game(520, 515, "boxcover3.png", 30, 40);
   game4 = new Game(580, 515, "boxcover2.png", 30, 40);
+  poster1 = new poster();
 }
 
 
@@ -106,7 +108,9 @@ void draw() {
   game3.display();
   game4.display();
   window1.display();
-
+  println(mouseX);
+  println(mouseY);
+  poster1.display();
 }
 
 void keyPressed() {
