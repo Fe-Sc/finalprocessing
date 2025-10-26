@@ -44,10 +44,10 @@ void setup() {
   marioStatue = new Statue(1100, 675);
   screen = new ArcadeScreen(365, 350);
   shelf1 = new Shelf(500, 300);
-  game1 = new Game(520, 390, "boxcover.png", 30, 40, 1);
-  game2 = new Game(580, 390, "boxcover2.png", 30, 40,1);
-  game3 = new Game(520, 515, "boxcover3.png", 30, 40,1);
-  game4 = new Game(580, 515, "boxcover2.png", 30, 40,1);
+  game1 = new Game(520, 390, "boxcover.png", 30, 40);
+  game2 = new Game(580, 390, "boxcover2.png", 30, 40);
+  game3 = new Game(520, 515, "boxcover3.png", 30, 40);
+  game4 = new Game(580, 515, "boxcover2.png", 30, 40);
   figure1 = new Figure(1043,268,"Figure1.png");
   figure2 = new Figure(1073,268,"figure2.png");
   figure3 = new Figure(1103,268,"figure3.png");

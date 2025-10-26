@@ -1,6 +1,5 @@
 class Game {
   int GameId;
-  int windowNumber;
   float x;
   float y;
   float imgWidth;
@@ -13,10 +12,10 @@ class Game {
   float gravity = 0.5;
   float speed = 1;
 
-  Game(float initX, float initY, String imgpath, int w, int h, int window) {
+  Game(float initX, float initY, String imgpath, int w, int h) {
     x = initX;
     y = initY;
-    windowNumber = window;
+    
     imgWidth = w;
     imgHeight = h;
     img = loadImage(imgpath);
@@ -28,14 +27,11 @@ class Game {
       xOffset = mx - x;
       yOffset = my - y;
 
-      if (window1.isBroken && windowNumber == 1) {
+      if (window1.isBroken) {
         dragging = true;
         pickedUp = true;
       }
-      if (window2.isBroken && windowNumber == 2){
-        dragging = true;
-      pickedUp = true;
-    } else dragging = false;
+      else dragging = false;
   }}
 
 
