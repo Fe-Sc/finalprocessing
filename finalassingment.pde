@@ -19,6 +19,9 @@ Game game1;
 Game game2;
 Game game3;
 Game game4;
+Figure figure1;
+Figure figure2;
+Figure figure3;
 
 
 
@@ -45,6 +48,9 @@ void setup() {
   game2 = new Game(580, 390, "boxcover2.png", 30, 40,1);
   game3 = new Game(520, 515, "boxcover3.png", 30, 40,1);
   game4 = new Game(580, 515, "boxcover2.png", 30, 40,1);
+  figure1 = new Figure(1043,268,"Figure1.png");
+  figure2 = new Figure(1073,268,"figure2.png");
+  figure3 = new Figure(1103,268,"figure3.png");
 }
 
 
@@ -60,6 +66,9 @@ void mousePressed() {
   game3.onClick(mouseX, mouseY);
   game4.onClick(mouseX, mouseY);
   door.onClick(mouseX, mouseY);
+  figure1.onClick(mouseX,mouseY);
+  figure2.onClick(mouseX,mouseY);
+  figure3.onClick(mouseX,mouseY);
 }
 
 void mouseDragged() {
@@ -106,8 +115,12 @@ void draw() {
   game3.display();
   game4.display();
   window1.display();
-  println(mouseX);
-  println(mouseY);
+  figure1.grav();
+  figure2.grav();
+  figure3.grav();
+  figure1.display();
+  figure2.display();
+  figure3.display();
 }
 
 void keyPressed() {
