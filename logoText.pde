@@ -11,6 +11,7 @@ class logoText {
   boolean[] falling = new boolean[14]; // track which letters are dropping
   float[] shakeOffset = new float[14];
   float[] shakeTimer = new float[14];
+  
   //Constructors
   logoText(float x, float y) {
     xPos = x;

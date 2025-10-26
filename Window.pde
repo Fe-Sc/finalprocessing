@@ -34,15 +34,38 @@ class Window {
   void crackWindow(int x, int y) {
    //cracks zien er ass uit moet nog fixen
     stroke(#000000);
-    line(x, y, x-10, y-30);
+    /*line(x, y, x-10, y-30);
     line(x-10, y-30, x-20, y-40);
     line(x-10, y-30, x, y-50);
     line(x, y, x+20, y+10);
     line(x, y, x-30, y+15);
     line(x, y, x-20, y-10);
     line(x-20, y-10, x-35, y);
-    line(x-20, y-10, x-10, y-30);
-
+    line(x-20, y-10, x-10, y-30);*/
+    
+    line(x-15, y, x-5, y+10);
+    line(x-5, y+10, x+15, y+8);
+    line(x+15, y+8, x+15, y+2);
+    line(x+15, y+2, x+20, y-5);
+    line(x+20, y-5, x+5, y-12);
+    line(x+5, y-12, x-15, y);
+   
+    line(x+5, y-12, x+7, y-40);
+    line(x+6, y-23, x+22, y-34);
+    line(x+5, y-18, x-5, y-18);
+   
+    line(x-15, y, x-35, y-5);
+    line(x-30, y-4, x-20, y-21);
+    line(x-20, y-2, x-30, y+8);
+    
+    line (x+15, y+8, x+25, y+28);
+    line (x+22, y+19, x+25, y-10);
+    
+    line(x+20, y-5, x+30, y-13);
+    line(x-5, y+10, x-5, y+30);
+    
+    line(x-27, y+4, x-5, y+22);
+    line(x-5, y+30, x+25, y+28);
   }
   
   
