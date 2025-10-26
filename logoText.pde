@@ -89,9 +89,6 @@ class logoText {
     durability[x] = durability[x] - 1;
   }
 
-  void moveText(){
-    
-  }
 
   void display() {
     updateText();
