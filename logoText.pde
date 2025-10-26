@@ -9,7 +9,8 @@ class logoText {
   float[] speedY = new float[14];
   float[] durability = new float[14];
   boolean[] falling = new boolean[14]; // track which letters are dropping
-
+  float[] shakeOffset = new float[14];
+  float[] shakeTimer = new float[14];
   //Constructors
   logoText(float x, float y) {
     xPos = x;
@@ -19,6 +20,8 @@ class logoText {
       durability[i] = 3;
       speedY[i] = 0;
       falling[i] = false;
+      shakeOffset[i] = 0;
+      shakeTimer[i] = 0;
     }
   }
   //Draw the text at the correct position
@@ -27,7 +30,8 @@ class logoText {
     fill(#FFFFFF);
     float x = xPos;
     for (int i = 0; i <letters.length; i++) {
-      text(letters[i], x, letterY[i]);
+      float xDraw = x + shakeOffset[i];
+      text(letters[i], xDraw, letterY[i]);
       letterX[i] = x;
       if (i==7) {
         x += textWidth(letters[i])+45;
@@ -45,6 +49,7 @@ class logoText {
         if (mx > letterX[i] && mx < letterX[i] + textWidth(letters[i]) && my < letterY[i]) {
           println(letters[i]);
           updateDurability(i);
+          shakeTimer[i] = 2;
           println(durability[i]);
           if (durability[i] <= 0) falling[i] = true;
         }
@@ -56,6 +61,14 @@ class logoText {
   void updateText() {
     for (int i = 0; i <14; i++) {
 
+        if (shakeTimer[i] > 0) {
+        shakeOffset[i] = random(-3, 3); // shake left/right 3px
+        shakeTimer[i]--;
+      } else {
+        shakeOffset[i] = 0;
+      }
+      
+      
       if (falling[i]) {
         speedY[i] += gravity;
         letterY[i] += speedY[i];
@@ -75,7 +88,9 @@ class logoText {
     durability[x] = durability[x] - 1;
   }
 
-
+  void moveText(){
+    
+  }
 
   void display() {
     updateText();
