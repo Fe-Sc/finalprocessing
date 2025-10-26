@@ -1,3 +1,4 @@
+
 TvKast tvKast1;
 Window window1;
 Window window2;
@@ -15,6 +16,7 @@ Game game1;
 Game game2;
 Game game3;
 Game game4;
+
 
 
 int globalTimer = 0;
@@ -38,8 +40,12 @@ void setup() {
   shelf1 = new Shelf(500, 300);
   game1 = new Game(520, 390, "boxcover.png", 30, 40);
   game2 = new Game(580, 390, "boxcover2.png", 30, 40);
+<<<<<<< HEAD
   game3 = new Game(620, 390, "boxcover3.png", 30, 40);
   game4 = new Game(530, 512, "boxcover3.png", 30, 40);
+=======
+  game3 = new Game(580, 515, "boxcover3.png", 30, 40);
+>>>>>>> 37061d04d307ea00f4409bd8389bea12bb50dd5a
 }
 
 void mousePressed() {
@@ -52,21 +58,31 @@ void mousePressed() {
   tv1.onClick(mouseX, mouseY);
   game2.onClick(mouseX, mouseY);
   game3.onClick(mouseX, mouseY);
+<<<<<<< HEAD
   game4.onClick(mouseX, mouseY);
+=======
+
+>>>>>>> 37061d04d307ea00f4409bd8389bea12bb50dd5a
 }
 
 void mouseDragged() {
   game1.onDrag(mouseX, mouseY);
   game2.onDrag(mouseX, mouseY);
   game3.onDrag(mouseX, mouseY);
+<<<<<<< HEAD
   game4.onDrag(mouseX, mouseY);
+=======
+>>>>>>> 37061d04d307ea00f4409bd8389bea12bb50dd5a
 }
 
 void mouseReleased() {
   game1.onRelease();
   game2.onRelease();
   game3.onRelease();
+<<<<<<< HEAD
   game4.onRelease();
+=======
+>>>>>>> 37061d04d307ea00f4409bd8389bea12bb50dd5a
 }
 
 void updateTimer() {
@@ -89,7 +105,7 @@ void draw() {
   marioStatue.display();
   screen.display();
   window2.display();
-  window1.display();
+  
   ch1.display();
   ch1.grav();
   text.display();
@@ -98,7 +114,11 @@ void draw() {
   game1.display();
   game2.display();
   game3.display();
+<<<<<<< HEAD
   game4.display();
+=======
+  window1.display();
+>>>>>>> 37061d04d307ea00f4409bd8389bea12bb50dd5a
 }
 
 void keyPressed() {
