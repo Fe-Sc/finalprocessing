@@ -48,9 +48,9 @@ void setup() {
   game2 = new Game(580, 390, "boxcover2.png", 30, 40);
   game3 = new Game(520, 515, "boxcover3.png", 30, 40);
   game4 = new Game(580, 515, "boxcover2.png", 30, 40);
-  figure1 = new Figure(1043,268,"Figure1.png");
-  figure2 = new Figure(1073,268,"figure2.png");
-  figure3 = new Figure(1103,268,"figure3.png");
+  figure1 = new Figure(1043, 268, "Figure1.png");
+  figure2 = new Figure(1073, 268, "figure2.png");
+  figure3 = new Figure(1103, 268, "figure3.png");
 }
 
 //Update all mouse positions for each interaction
@@ -66,9 +66,9 @@ void mousePressed() {
   game3.onClick(mouseX, mouseY);
   game4.onClick(mouseX, mouseY);
   door.onClick(mouseX, mouseY);
-  figure1.onClick(mouseX,mouseY);
-  figure2.onClick(mouseX,mouseY);
-  figure3.onClick(mouseX,mouseY);
+  figure1.onClick(mouseX, mouseY);
+  figure2.onClick(mouseX, mouseY);
+  figure3.onClick(mouseX, mouseY);
 }
 
 
@@ -77,7 +77,6 @@ void mouseDragged() {
   game2.onDrag(mouseX, mouseY);
   game3.onDrag(mouseX, mouseY);
   game4.onDrag(mouseX, mouseY);
-
 }
 
 void mouseReleased() {
@@ -85,7 +84,6 @@ void mouseReleased() {
   game2.onRelease();
   game3.onRelease();
   game4.onRelease();
-
 }
 //Update timer for TV use
 void updateTimer() {
@@ -109,16 +107,14 @@ void draw() {
   screen.display();
 
   ch1.display();
-  ch1.grav();
+
   text.display();
   game1.display();
   game2.display();
   game3.display();
   game4.display();
 
-  figure1.grav();
-  figure2.grav();
-  figure3.grav();
+
   figure1.display();
   figure2.display();
   figure3.display();

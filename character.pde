@@ -18,9 +18,7 @@ class character {
     if (visible) {
       image(img, x, y);
     }
-  }
-
-  void grav() { //main gravity function
+    //gravity
     y = y + airspeed;
     airspeed = airspeed + grav;
     if (y < 350) {
@@ -29,11 +27,13 @@ class character {
     } else if ( y > 405) {
       y = 405;
       airspeed = 0;
-      jumping = false; 
+      jumping = false;
     }
   }
 
-  void jumping() { 
+
+
+  void jumping() {
     if (screen.IsOn) {
       if (jumping == false) { //character only jumps if not jumping
         airspeed = jump;
